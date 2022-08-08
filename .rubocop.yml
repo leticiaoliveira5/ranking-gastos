@@ -1,0 +1,26 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 3.0.0
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'test/**/*'
+    - 'config/puma.rb'
+    - 'config/spring.rb'
+    - 'config/environments/*'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
