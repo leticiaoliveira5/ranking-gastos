@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_09_152224) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_09_195732) do
   create_table "deputies", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -21,6 +21,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_09_152224) do
     t.integer "legislature_code"
     t.string "uf_initials", limit: 2
     t.string "party_initials", limit: 10
+  end
+
+  create_table "expenditures", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "deputy_id"
+    t.string "provider_name"
+    t.datetime "issue_date"
+    t.integer "net_amount"
+    t.integer "year"
+    t.string "document_url"
   end
 
 end
