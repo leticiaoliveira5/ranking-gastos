@@ -1,0 +1,18 @@
+pt-BR:
+  activerecord:
+    attributes:
+      deputy:
+        name: Nome Parlamentar
+        registration_id: Identificador Único do Parlamentar
+        portfolio_number: Número da Carteira Parlamentar
+        legislature_number: Número da Legislatura
+        uf_initials: Sigla da UF
+        party_initials: Sigla do Partido
+        legislature_code: Código da Legislatura
+      expenditure:
+        provider_name: Fornecedor
+        issue_date: Data de Emissão
+        net_amount: Valor Líquido
+        year: Ano
+        requester_id: Identificador do Solicitante
+        document_url: URL do Documento
