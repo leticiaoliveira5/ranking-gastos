@@ -1,0 +1,15 @@
+<div class="col-md-6 p-3">
+  <div class="text-center p-3">
+    <%= t('.file_upload_hint_html') %>
+  </div>
+
+  <%= form_with url: file_upload_load_data_path, method: :post do |f| %>
+    <div class="text-center p-3">
+      <%= f.file_field :csv_file, accept: '.csv, text/csv' %> <br>
+    </div>
+
+    <div class="text-center">
+      <%= f.submit 'Carregar', class: "btn btn-primary btn-lg", data: { :disable_with => 'Aguarde...' } %>
+    </div>
+  <% end %>
+</div>
