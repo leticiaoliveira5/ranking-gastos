@@ -2,7 +2,7 @@ pt-BR:
   hello: Oi Mundo
   home:
     index:
-      title: Ranking dos Gastos dos Deputados - RJ
+      title: Ranking dos Gastos dos Deputados - RJ - %{year}
       hint: Deputados ordenados pela grandeza dos seus gastos no ano
   file_upload:
     new:
@@ -10,4 +10,4 @@ pt-BR:
   data_load:
     success: Informações carregadas com sucesso
     failure: Algo deu errado
-    invalid_format: O formato do arquivo é inválido.
+    invalid_format: O arquivo é inválido.

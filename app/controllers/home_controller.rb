@@ -1,9 +1,13 @@
 class HomeController < ApplicationController
   def index
-    redirect_to file_upload_new_path unless Deputy.count.positive?
-
-    @deputies = Deputy.all
-    @ranking = @deputies.includes(:expenditures).sort_by(&:amount_spent).reverse
+    if Deputy.count.zero?
+      redirect_to file_upload_new_path
+    else
+      @deputies = Deputy.all
+      @ranking = @deputies.includes(:expenditures).sort_by(&:amount_spent).reverse
+      @year = @deputies.first&.expenditures&.first&.year
+    end
+  end
 
   def clean
     Deputy.delete_all
