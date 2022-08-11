@@ -1,0 +1,21 @@
+<div class="col-md-6 p-3">
+  <div class="row">
+    <div class="col-md-4"><%= image_tag(@deputy.picture_url, width: '100%') %></div>
+    <div class="col-md-8">
+      <h3>Dados do Parlamentar</h3>
+      <p><b><%= Deputy.human_attribute_name('name') %>:</b> <%= @deputy.name %></p>
+      <p><b><%= Deputy.human_attribute_name('registration_id') %>:</b> <%= @deputy.registration_id %></p>
+      <p><b><%= Deputy.human_attribute_name('portfolio_number') %>:</b> <%= @deputy.portfolio_number %> </p>
+      <p><b><%= Deputy.human_attribute_name('legislature_number') %>:</b> <%= @deputy.legislature_number %> </p>
+      <p><b><%= Deputy.human_attribute_name('uf_initials') %>:</b> <%= @deputy.uf_initials %></p>
+      <p><b><%= Deputy.human_attribute_name('party_initials') %>:</b> <%= @deputy.party_initials %></p>
+      <p><b><%= Deputy.human_attribute_name('legislature_code') %>:</b> <%= @deputy.legislature_code %></p>
+      <p><b><%= Deputy.human_attribute_name('amount_spent') %>:</b> <%= money(@deputy.amount_spent) %></p>
+      <p><b><%= Deputy.human_attribute_name('biggest_expenditure') %>:</b> <%= money(@deputy.biggest_expenditure) %></p>
+    </div>
+  </div>
+  <div class="row">
+    <h3>Gastos</h3>
+    <%= render 'expenditures_table', expenditures: @deputy.expenditures %>
+  </div>
+</div>
