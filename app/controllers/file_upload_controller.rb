@@ -1,14 +1,14 @@
 class FileUploadController < ApplicationController
   def load_data
-    file = params[:csv_file]
-    if file.content_type.in?(['csv', 'text/csv'])
-      if LoadData.new(csv_file: file.path).call
-        redirect_to root_path
+    service = LoadData.new(csv_file: params[:csv_file])
+    if service.valid?
+      if service.call
+        redirect_to root_path, notice: t('data_load.success')
       else
-        raise 'Error'
+        redirect_to file_upload_new_path, alert: t('data_load.failure')
       end
     else
-      raise 'Not a CSV File'
+      redirect_to file_upload_new_path, alert: t('data_load.invalid_format')
     end
   end
 end

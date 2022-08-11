@@ -7,3 +7,7 @@ pt-BR:
   file_upload:
     new:
       file_upload_hint_html: Baixe o arquivo CSV disponível no <a href="https://dadosabertos.camara.leg.br/swagger/api.html#staticfile">portal da Câmara dos Deputados</a>.
+  data_load:
+    success: Informações carregadas com sucesso
+    failure: Algo deu errado
+    invalid_format: O formato do arquivo é inválido.

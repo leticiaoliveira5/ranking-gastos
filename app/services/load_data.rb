@@ -8,12 +8,10 @@ class LoadData
   end
 
   def call
-    file = File.open(@csv_file)
-
     deputies = []
     expenditures = []
 
-    CSV.foreach(file, headers: true, col_sep: ';', liberal_parsing: true) do |row|
+    CSV.foreach(@csv_file, headers: true, col_sep: ';', liberal_parsing: true) do |row|
       next unless row['sgUF'] == UF
 
       deputies << { name: row['txNomeParlamentar'],
@@ -34,5 +32,9 @@ class LoadData
 
     Deputy.insert_all(deputies.uniq)
     Expenditure.insert_all(expenditures)
+  end
+
+  def valid?
+    @csv_file.content_type.in?(['csv', 'text/csv'])
   end
 end
