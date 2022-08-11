@@ -9,6 +9,8 @@ pt-BR:
         uf_initials: Sigla da UF
         party_initials: Sigla do Partido
         legislature_code: Código da Legislatura
+        amount_spent: Total Gasto
+        biggest_expenditure: Maior gasto
       expenditure:
         provider_name: Fornecedor
         issue_date: Data de Emissão
