@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  get :clean, controller: :home
+
   resources :deputies, only: %i[show]
 
   resources :expenditures, only: %i[show]

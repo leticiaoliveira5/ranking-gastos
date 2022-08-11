@@ -3,4 +3,14 @@
   <span class="text-center p-3 d-block"><%= t('.hint') %></h3>
 
   <%= render 'ranking' %>
+
+  <% if @deputies.any? %>
+    <div class="text-center">
+      <%= link_to 'Limpar dados e começar novamente', 
+                  clean_path,
+                  form: { data: { turbo_confirm: 'message' } },
+                  class: 'btn btn-outline-danger mb-3' %>
+    </div>
+
+  <% end %>
 </div>
