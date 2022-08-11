@@ -1,0 +1,22 @@
+<div class="text-center mt-3">
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Valor</th>
+        <th scope="col">Estabelecimento</th>
+        <th scope="col">Data da emissão</th>
+        <th scope="col">Documento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% expenditures.each do |expenditure| %>
+      <tr>
+        <th scope="row"><%= money(expenditure.net_amount) %></th>
+        <td><%= expenditure.provider_name %></td>
+        <td><%= expenditure.issue_date&.strftime("%d/%m/%Y") %></td>
+        <td><%= link_to 'Nota Fiscal', expenditure.document_url %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
