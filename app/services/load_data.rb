@@ -15,12 +15,12 @@ class LoadData
       next unless row['sgUF'] == UF
 
       deputies << { name: row['txNomeParlamentar'],
-                        registration_id: row['ideCadastro'],
-                        portfolio_number: row['nuCarteiraParlamentar'],
-                        legislature_number: row['nuLegislatura'],
-                        uf_initials: row['sgUF'],
-                        party_initials: row['sgPartido'],
-                        legislature_code: row['codLegislatura'] }
+                    registration_id: row['ideCadastro'],
+                    portfolio_number: row['nuCarteiraParlamentar'],
+                    legislature_number: row['nuLegislatura'],
+                    uf_initials: row['sgUF'],
+                    party_initials: row['sgPartido'],
+                    legislature_code: row['codLegislatura'] }
 
       expenditures << { deputy_registration_id: row['ideCadastro'],
                         provider_name: row['txtFornecedor'],
