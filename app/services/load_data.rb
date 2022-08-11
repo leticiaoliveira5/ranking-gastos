@@ -35,6 +35,8 @@ class LoadData
   end
 
   def valid?
+    return false if @csv_file.blank?
+
     @csv_file.content_type.in?(['csv', 'text/csv'])
   end
 end
