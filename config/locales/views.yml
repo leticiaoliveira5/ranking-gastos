@@ -3,6 +3,7 @@ pt-BR:
   home:
     index:
       title: Ranking dos Gastos dos Deputados - RJ
+      hint: Deputados ordenados pela grandeza dos seus gastos no ano
   file_upload:
     new:
       file_upload_hint_html: Baixe o arquivo CSV disponível no <a href="https://dadosabertos.camara.leg.br/swagger/api.html#staticfile">portal da Câmara dos Deputados</a>.
