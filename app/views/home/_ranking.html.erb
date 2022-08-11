@@ -16,7 +16,7 @@
           <p><%= Deputy.human_attribute_name('name') %>: <%= row.name %> </p>
           <p><%= Deputy.human_attribute_name('amount_spent') %>: <%= money(row.amount_spent) %></p>
           <p><%= Deputy.human_attribute_name('biggest_expenditure') %>: <%= money(row.biggest_expenditure) %></p>
-          <p> <%= link_to 'Ver detalhes do candidato', deputy_path(row.id) %> </p>
+          <p> <%= link_to 'Ver detalhes do parlamentar', deputy_path(row.id) %> </p>
         </td>
       </tr>
       <% end %>
