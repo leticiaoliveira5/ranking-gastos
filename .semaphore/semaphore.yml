@@ -15,6 +15,7 @@ blocks:
           commands:
             - checkout
             - sem-version ruby 3.0.0
+            - gem install bundler:2.2.15
             - bundle config set --local deployment 'true'
             - bundle config set --local path 'vendor/bundle'
             - bundle install
