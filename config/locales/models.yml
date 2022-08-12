@@ -2,7 +2,7 @@ pt-BR:
   activerecord:
     attributes:
       deputy:
-        name: Nome Parlamentar
+        name: Nome do Parlamentar
         registration_id: Identificador Único do Parlamentar
         portfolio_number: Número da Carteira Parlamentar
         legislature_number: Número da Legislatura
