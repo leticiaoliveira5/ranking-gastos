@@ -11,7 +11,7 @@ class LoadData
     deputies = []
     expenditures = []
 
-    CSV.foreach(@csv_file, headers: true, col_sep: ';', liberal_parsing: true) do |row|
+    CSV.foreach(@csv_file, headers: true, col_sep: ';', encoding: 'bom|utf-8', liberal_parsing: true) do |row|
       next unless row['sgUF'] == UF
 
       deputies << { name: row['txNomeParlamentar'],
