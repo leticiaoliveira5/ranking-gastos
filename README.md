@@ -21,6 +21,7 @@ O desafio consiste em analisar alguns dados disponibilizados pela Câmara dos De
 
 ```bash
 bundle install
+rails assets:precompile
 ```
 
 - Fazer o setup do banco de dados (criação das tabelas):
@@ -42,7 +43,7 @@ Agora você pode acessar a aplicação em http://localhost:3000/
 Para rodar os testes, usar o comando:
 
 ```bash
-rspec
+bundle exec rspec
 ```
 
 ## :bulb:	Como usar a aplicação
