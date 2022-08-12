@@ -19,6 +19,7 @@ blocks:
             - bundle config set --local path 'vendor/bundle'
             - bundle install
             - yarn install
+            - bundle exec rake db:migrate RAILS_ENV=test
             - bundle exec rspec --format documentation
             - chmod +x ./cc-test-reporter
             - ./cc-test-reporter format-coverage coverage/.resultset.json --input-type 'simplecov'
