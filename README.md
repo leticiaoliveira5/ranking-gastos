@@ -1,47 +1,48 @@
-# Ranking dos gastos dos Deputados
+# :detective: Desafio Backend - Ranking dos gastos dos Deputados - RJ
 
-Estamos muito felizes que você tenha chegado nessa etapa do nosso processo seletivo, para essa fase, desejamos que você resolva um desafio. Nosso desafio consiste em analisar alguns dados disponibilizados pelo Câmara dos Deputados relativos aos gastos dos parlamentares. A ideia é descobrir quem, do seu estado, está gastando mais e exibir de forma resumida esses principais gastos.
+Aplicação Ruby on Rails (v. 7.0.2). 
 
-## Descrição do desafio
+O desafio consiste em analisar alguns dados disponibilizados pela Câmara dos Deputados relativos aos gastos dos parlamentares. A ideia é descobrir quem, do seu estado, está gastando mais e exibir de forma resumida esses principais gastos.
 
-Você já ouviu falar da CEAP? A Cota para o Exercício da Atividade Parlamentar, custeia as despesas do mandato, como passagens aéreas e conta de celular. Algumas são reembolsadas, como as com os Correios, e outras são pagas por débito automático, como a compra de passagens. Nos casos de reembolso, os deputados têm três meses para apresentar os recibos. O valor mensal não utilizado fica acumulado ao longo do ano. Por esse motivo, em alguns meses o valor gasto pode ser maior que a média mensal. (Fonte: [Portal da Câmara dos Deputados](https://www2.camara.leg.br/transparencia/acesso-a-informacao/copy_of_perguntas-frequentes/cota-para-o-exercicio-da-atividade-parlamentar)). Através do portal da transparência, nós temos acesso a essas despesas e podemos saber como e onde os políticos estão gastando.
+"A Cota para o Exercício da Atividade Parlamentar, custeia as despesas do mandato, como passagens aéreas e conta de celular. Algumas são reembolsadas, como as com os Correios, e outras são pagas por débito automático, como a compra de passagens. Nos casos de reembolso, os deputados têm três meses para apresentar os recibos. O valor mensal não utilizado fica acumulado ao longo do ano. Por esse motivo, em alguns meses o valor gasto pode ser maior que a média mensal. (Fonte: [Portal da Câmara dos Deputados](https://www2.camara.leg.br/transparencia/acesso-a-informacao/copy_of_perguntas-frequentes/cota-para-o-exercicio-da-atividade-parlamentar)). Através do portal da transparência, nós temos acesso a essas despesas e podemos saber como e onde os políticos estão gastando."
 
-## Base de dados e explicações complementares
+## :computer:	Requisitos
+- Ruby 3.0.0
+- Node
+- SQLite3
 
-- [Fonte de dados (pegar o referente ao ano 2021 em formato CSV)](https://dadosabertos.camara.leg.br/swagger/api.html#staticfile)
-- [Explicação dos campos do arquivo CSV](https://www2.camara.leg.br/transparencia/cota-para-exercicio-da-atividade-parlamentar/explicacoes-sobre-o-formato-dos-arquivos-xml)
-- Ignorar linhas que não tenham no campo `sgUF` o estado que você mora. O objetivo do trabalho é focar apenas no seu estado;
-- Considerar para fins de cálculos de despesa, o campo `vlrLiquido`. Esse é o valor que de fato foi debitado da cota do candidato;
-- Dica para pegar a foto do político: **http://www.camara.leg.br/internet/deputado/bandep/{ideCadastro}.jpg**
+## :scroll:	Como iniciar a aplicação localmente
 
+- Clonar este repositório
 
-## Requisitos Obrigatórios
-- Possibilitar o upload do arquivo;
-- Organizar os dados extraidos do arquivo em tabelas no banco de dados;
-- Listagem dos deputados do seu estado;
-- Mostrar o somatório dos seus gastos;
-- Listar as despesas, mostrando a data(`datEmissao`), estabelecimento(`txtFornecedor`), valor(`vlrLiquido`), e link para a nota(`urlDocumento`);
-- Destacar a maior despesa do candidato;
-- Usar o framework Rails (utilize esse repositório como base);
-- Ter uma cobertura de código;
+- No diretório do projeto, rodar pelo terminal:
 
-# Requisitos bônus
-Esses requisitos não são obrigatórios, mas serão levados em consideração como pontos extras no momento da avaliação.
+```bash
+bundle install
+```
 
-- Exibir gráficos para melhorar a visualização dos gastos;
-- Aplicação hospedada no Heroku, AWS ou similares;
-- Evitar N + 1 nas queries;
-- Organizar estrutura do projeto utilizando padrões de projetos;
+- Fazer o setup do banco de dados (criação das tabelas):
 
-# Critérios de avaliação
+```bash
+rake db:setup
+```
 
-- Organização do projeto: Avalia a estrutura do projeto, documentação e uso de controle de versão;
-- Coerência: Avalia se os requisitos foram atendidos;
-- Boas práticas: Avalia se o projeto segue boas práticas de desenvolvimento, incluindo segurança e otimização;
-- Criatividade: Avalia o quanto você "pensou fora da caixa", levando em conta soluções criativas para os problemas levantados;
+Iniciar a aplicação:
 
-O desafio deve ser entregue nos passando a URL de seu repositório. Fique a vontade caso queira incrementar o projeto com outras features não listadas aqui, iremos levar em consideração também!
+```bash
+rails server
+```
 
-Qualquer dúvida em relação ao desafio, responderemos por e-mail.
+Agora você pode acessar a aplicação em http://localhost:3000/
 
-Bom trabalho!
+## :bulb:	Como usar a aplicação
+
+É necessário fazer o upload de um arquivo CSV, que será parseado para popular o banco de dados e gerar as tabelas exibidas no app
+
+[Fonte de dados](https://dadosabertos.camara.leg.br/swagger/api.html#staticfile)
+
+Depois do upload e sua leitura realizada com sucesso, a opção de upload não ficará mais disponível até que você decida apagar os dados e iniciar novamente clicando no botão na página inicial.
+
+A página inicial consiste em um ranking com todos os deputados pela ordem dos gastos acumulados. Cada linha possui um link que leva para a página do parlamentar com mais detalhes sobre seus gastos.
+
+## :framed_picture:	Imagens da aplicação
