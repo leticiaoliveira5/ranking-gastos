@@ -7,7 +7,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'cssbundling-rails'
 gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 4.1'
-gem 'rails', '7.0.2.3'
+gem 'rails', '7.0.2.4'
 gem 'sass-rails', '>= 6'
 gem 'sqlite3', '~> 1.4'
 gem 'sprockets-rails', '3.4.2'
