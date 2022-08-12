@@ -1,5 +1,7 @@
 # :detective: Desafio Backend - Ranking dos gastos dos Deputados - RJ
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/b8d58ccaa50d5119d493/maintainability)](https://codeclimate.com/github/leticiaoliveira5/desafio-backend/maintainability)
+
 Aplicação Ruby on Rails (v. 7.0.2). 
 
 O desafio consiste em analisar alguns dados disponibilizados pela Câmara dos Deputados relativos aos gastos dos parlamentares. A ideia é descobrir quem, do seu estado, está gastando mais e exibir de forma resumida esses principais gastos.
