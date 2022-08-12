@@ -42,7 +42,7 @@ Agora você pode acessar a aplicação em http://localhost:3000/
 Para rodar os testes, usar o comando:
 
 ```bash
-bundle exec rspec
+rspec
 ```
 
 ## :bulb:	Como usar a aplicação
