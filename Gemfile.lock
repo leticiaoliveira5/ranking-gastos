@@ -280,7 +280,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   spring
-  sprockets-rails
+  sprockets-rails (= 3.4.2)
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
