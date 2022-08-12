@@ -21,17 +21,18 @@ O desafio consiste em analisar alguns dados disponibilizados pela Câmara dos De
 - No diretório do projeto, rodar pelo terminal:
 
 ```bash
-bundle install
-rails assets:precompile
+bin/setup
 ```
 
-- Fazer o setup do banco de dados (criação das tabelas):
+- Caso dê algum erro com o bin/setup, rode os comandos:
 
 ```bash
+bundle install
+rails assets:precompile
 rake db:setup
 ```
 
-Iniciar a aplicação:
+Inicie a aplicação:
 
 ```bash
 rails server
