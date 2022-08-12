@@ -35,6 +35,14 @@ rails server
 
 Agora você pode acessar a aplicação em http://localhost:3000/
 
+### Testes
+
+Para rodar os testes, usar o comando:
+
+```bash
+rspec
+```
+
 ## :bulb:	Como usar a aplicação
 
 É necessário fazer o upload de um arquivo CSV, que será parseado para popular o banco de dados e gerar as tabelas exibidas no app
@@ -46,3 +54,11 @@ Depois do upload e sua leitura realizada com sucesso, a opção de upload não f
 A página inicial consiste em um ranking com todos os deputados pela ordem dos gastos acumulados. Cada linha possui um link que leva para a página do parlamentar com mais detalhes sobre seus gastos.
 
 ## :framed_picture:	Imagens da aplicação
+
+![image](https://user-images.githubusercontent.com/74281572/184265183-7c4c2560-a5d5-4584-9fcf-b9bb7f034c93.png)
+
+![image](https://user-images.githubusercontent.com/74281572/184265230-08bc4138-fafe-4b59-b023-ffa546d0c07d.png)
+
+![image](https://user-images.githubusercontent.com/74281572/184265299-e1d38253-df17-47ea-b33f-cb451c236056.png)
+
+![image](https://user-images.githubusercontent.com/74281572/184265345-71202257-777b-4556-b993-4809f1c2c21e.png)
