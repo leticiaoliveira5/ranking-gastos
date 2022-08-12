@@ -10,6 +10,7 @@ gem 'puma', '~> 4.1'
 gem 'rails', '7.0.2.3'
 gem 'sass-rails', '>= 6'
 gem 'sqlite3', '~> 1.4'
+gem 'sprockets-rails', '3.4.2'
 gem 'turbolinks', '~> 5'
 
 group :development, :test do

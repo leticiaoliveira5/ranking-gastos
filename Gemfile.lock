@@ -287,6 +287,7 @@ DEPENDENCIES
   selenium-webdriver
   simplecov (~> 0.13.0)
   spring
+  sprockets-rails (= 3.4.2)
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
