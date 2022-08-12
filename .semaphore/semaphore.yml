@@ -14,13 +14,11 @@ blocks:
         - name: rspec
           commands:
             - checkout
-            - gem install bundler:2.2.15
             - sem-version ruby 3.0.0
             - bundle config set --local deployment 'true'
             - bundle config set --local path 'vendor/bundle'
             - bundle install
             - yarn install
-            - bundle exec rake db:migrate
             - bundle exec rspec --format documentation
             - chmod +x ./cc-test-reporter
             - ./cc-test-reporter format-coverage coverage/.resultset.json --input-type 'simplecov'
