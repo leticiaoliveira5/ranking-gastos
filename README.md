@@ -16,6 +16,37 @@ O desafio consiste em analisar alguns dados disponibilizados pela Câmara dos De
 
 ## :scroll:	Como iniciar a aplicação localmente
 
+### :whale: Com Docker
+
+Se você tem Docker instalado, tente isso:
+
+- Clonar este repositório
+
+```bash
+git clone https://github.com/leticiaoliveira5/jobs.git
+```
+
+- No diretório do projeto, rodar pelo terminal:
+
+```bash
+docker-compose build
+```
+
+- Fazer o setup do banco de dados:
+```bash
+docker-compose run --rm web bundle exec rake db:create db:migrate RAILS_ENV=development
+```
+
+E então:
+
+```bash
+docker-compose up
+```
+
+Agora você pode acessar a aplicação em http://localhost:3000/
+
+### Sem Docker
+
 - Clonar este repositório
 
 - No diretório do projeto, rodar pelo terminal:
