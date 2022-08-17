@@ -9,12 +9,44 @@ O desafio consiste em analisar alguns dados disponibilizados pela Câmara dos De
 
 "A Cota para o Exercício da Atividade Parlamentar, custeia as despesas do mandato, como passagens aéreas e conta de celular. Algumas são reembolsadas, como as com os Correios, e outras são pagas por débito automático, como a compra de passagens. Nos casos de reembolso, os deputados têm três meses para apresentar os recibos. O valor mensal não utilizado fica acumulado ao longo do ano. Por esse motivo, em alguns meses o valor gasto pode ser maior que a média mensal. (Fonte: [Portal da Câmara dos Deputados](https://www2.camara.leg.br/transparencia/acesso-a-informacao/copy_of_perguntas-frequentes/cota-para-o-exercicio-da-atividade-parlamentar)). Através do portal da transparência, nós temos acesso a essas despesas e podemos saber como e onde os políticos estão gastando."
 
-## :computer:	Requisitos
-- Ruby 3.0.0
-- Node
-- SQLite3
-
 ## :scroll:	Como iniciar a aplicação localmente
+
+### :whale: Com Docker
+
+Se você tem Docker instalado, tente isso:
+
+- Clonar este repositório
+
+```bash
+git clone https://github.com/leticiaoliveira5/jobs.git
+```
+
+- No diretório do projeto, rodar pelo terminal:
+
+```bash
+docker-compose build
+```
+
+- Fazer o setup do banco de dados:
+```bash
+docker-compose run --rm web bundle exec rake db:create db:migrate RAILS_ENV=development
+```
+
+E então:
+
+```bash
+docker-compose up
+```
+
+Agora você pode acessar a aplicação em http://localhost:3000/
+
+### :computer: Sem Docker
+
+- Requisitos
+
+   - Ruby 3.0.0
+   - Node
+   - SQLite3
 
 - Clonar este repositório
 
