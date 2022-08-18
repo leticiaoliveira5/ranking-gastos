@@ -11,7 +11,8 @@ O desafio consiste em analisar alguns dados disponibilizados pela Câmara dos De
 
 ## :scroll:	Como iniciar a aplicação localmente
 
-### :whale: Com Docker
+<details>
+<summary> Com Docker :whale: </summary>
 
 Se você tem Docker instalado, tente isso:
 
@@ -40,7 +41,10 @@ docker-compose up
 
 Agora você pode acessar a aplicação em http://localhost:3000/
 
-### :computer: Sem Docker
+</details>
+
+<details>
+<summary>Sem Docker :computer: </summary>
 
 - Requisitos
 
@@ -70,6 +74,7 @@ rails server
 ```
 
 Agora você pode acessar a aplicação em http://localhost:3000/
+</details>
 
 ### Testes
 
