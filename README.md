@@ -1,4 +1,4 @@
-# :detective: Desafio Backend - Ranking dos gastos dos Deputados - RJ
+# :detective: Ranking dos gastos dos Deputados - RJ
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/b8d58ccaa50d5119d493/maintainability)](https://codeclimate.com/github/leticiaoliveira5/desafio-backend/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b8d58ccaa50d5119d493/test_coverage)](https://codeclimate.com/github/leticiaoliveira5/desafio-backend/test_coverage)
