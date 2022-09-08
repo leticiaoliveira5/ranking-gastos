@@ -3,10 +3,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/b8d58ccaa50d5119d493/maintainability)](https://codeclimate.com/github/leticiaoliveira5/desafio-backend/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b8d58ccaa50d5119d493/test_coverage)](https://codeclimate.com/github/leticiaoliveira5/desafio-backend/test_coverage)
 
-Aplicação Ruby on Rails (v. 7.0.2). 
-
-O desafio consiste em analisar alguns dados disponibilizados pela Câmara dos Deputados relativos aos gastos dos parlamentares. A ideia é descobrir quem, do seu estado, está gastando mais e exibir de forma resumida esses principais gastos.
-
 "A Cota para o Exercício da Atividade Parlamentar, custeia as despesas do mandato, como passagens aéreas e conta de celular. Algumas são reembolsadas, como as com os Correios, e outras são pagas por débito automático, como a compra de passagens. Nos casos de reembolso, os deputados têm três meses para apresentar os recibos. O valor mensal não utilizado fica acumulado ao longo do ano. Por esse motivo, em alguns meses o valor gasto pode ser maior que a média mensal. (Fonte: [Portal da Câmara dos Deputados](https://www2.camara.leg.br/transparencia/acesso-a-informacao/copy_of_perguntas-frequentes/cota-para-o-exercicio-da-atividade-parlamentar)). Através do portal da transparência, nós temos acesso a essas despesas e podemos saber como e onde os políticos estão gastando."
 
 ## :scroll:	Como iniciar a aplicação localmente
