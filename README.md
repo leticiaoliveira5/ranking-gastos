@@ -53,17 +53,18 @@ Agora você pode acessar a aplicação em http://localhost:3000/
 - No diretório do projeto, rodar pelo terminal:
 
 ```bash
-bundle install
-rails assets:precompile
+bin/setup
 ```
 
-- Fazer o setup do banco de dados (criação das tabelas):
+- Caso dê algum erro com o bin/setup, rode os comandos:
 
 ```bash
+bundle install
+rails assets:precompile
 rake db:setup
 ```
 
-Iniciar a aplicação:
+Inicie a aplicação:
 
 ```bash
 rails server
